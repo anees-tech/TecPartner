@@ -1,0 +1,15 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const RenderBar = () => {
+  return (
+    <div className='bg-indigo-500 flex items-center justify-between py-12 px-16 mb-16'>
+      <h1 className='text-3xl text-white font-semibold'>Ready For Next Career Move </h1>
+      <Link to="/ContactUs">
+      <button className='py-[12px] px-[30px] rounded-full bg-white text-sm font-bold text-indigo-500'>GET STARTED</button>
+      </Link>
+    </div>
+  )
+}
+
+export default RenderBar
