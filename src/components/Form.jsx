@@ -13,6 +13,7 @@ const Form = () => {
             <div>
               <h4 className='text-[18px] font-medium mb-2'>Location:</h4>
               <p className='text-[14px] text-gray-500'>Lahore, Pakistan</p>
+              <button className="btn glass">Glass button</button>
             </div>
           </div>
           <div className='flex items-center gap-4'>
