@@ -20,23 +20,23 @@ function Home() {
       <div className="flex items-center bg-gray-100 justify-center xl:flex-nowrap  gap-4 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap">
         <Card
           svg={svgString1}
-          heading={"RPO"}
+          heading={"Recruitment Process Outsourcing"}
           para={
-            "Experts in providing tailored recruitment and staffing solutions for both technical and non-technical positions. Our main focus is to help your organization find top talent that aligns with your goals."
+            "We provide RPO services to various corporate clients precisely the SAAS domain."
           }
         />
         <Card
           svg={svgString2}
-          heading={"BPO"}
+          heading={"Business Process Outsourcing"}
           para={
-            "As a Global Recruitment & Staffing agency, our mission is to connect you with your ideal job."
+            "We provide back-office support the cost-effective and efficient approach"
           }
         />
         <Card
           svg={svgString3}
-          heading={"ITO"}
+          heading={"Information Technology Outsourcing"}
           para={
-            "Easetalent bring the spark back into your career by offering top-notch consultation services to guide you through interview preparation, craft compelling resumes, identify the best career moves, and optimize your professional profile. Get ready to shine and land your dream job with our expert assistance!"
+            "We provide information technology-based solutions for all kinds of businesses from Startup to Enterprise level."
           }
         />
       </div>

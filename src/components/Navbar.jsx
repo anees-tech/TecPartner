@@ -10,15 +10,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" mirror h-18 bg-[#0066ff]  border-gray-200 scroll-smooth focus:scroll-auto shadow-lg	 fixed w-full ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-8 py-4">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap text-white flex items-center space-x-3 rtl:space-x-reverse">
-          <Link to="/">TECPARTNER</Link>
+    <nav className=" mirror h-18 bg-white border-gray-200 scroll-smooth focus:scroll-auto shadow-lg	 fixed w-full ">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
+        <span className=" h-16 w-28 p-4 self-center text-2xl font-semibold whitespace-nowrap text-white flex items-center space-x-3 rtl:space-x-reverse">
+          <Link to="/">
+            <img src="images/logo.png" alt="logo" />
+          </Link>
         </span>
         <button
           onClick={toggleNavbar}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden text-white focus:outline-none focus:ring-2 focus:ring-gray-200 "
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden text-[#15307c] focus:outline-none focus:ring-2 focus:ring-[#9eafd6] "
           aria-controls="navbar-multi-level"
           aria-expanded={isNavbarOpen}
         >
@@ -45,12 +47,12 @@ const Navbar = () => {
           } w-full md:block md:w-auto`}
           id="navbar-multi-level"
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[#9eafd6] rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
             {/* Home */}
             <li>
               <Link
                 to="/"
-                className="block py-2 text-white hover:text-slate-300 duration-500 rounded"
+                className="block py-2 text-[#15307c] hover:text-[#728bc5]  duration-500 rounded"
                 aria-current="page"
               >
                 Home
@@ -60,7 +62,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/AboutUs"
-                className="block py-2 text-white hover:text-slate-300 duration-500 rounded"
+                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
               >
                 About Us
               </Link>
@@ -69,7 +71,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/Services"
-                className="block py-2 text-white hover:text-slate-300 duration-500 rounded"
+                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
               >
                 Services
               </Link>
@@ -78,7 +80,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/Career"
-                className="block py-2 text-white hover:text-slate-300 duration-500 rounded"
+                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
               >
                 Career
               </Link>
@@ -87,7 +89,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/ContactUs"
-                className="block py-2 text-white hover:text-slate-300 duration-500 rounded"
+                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
               >
                 Contact Us
               </Link>
