@@ -1,1 +1,5 @@
-
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tecpdtav/public_html/
+    - /bin/cp * $DEPLOYPATH
