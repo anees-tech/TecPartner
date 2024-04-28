@@ -13,7 +13,7 @@ const HeaderForPages = (props) => {
         <p className="w-[50%] text-center p-4 text-gray-200">{para}</p>
       </div>
       <svg
-        className="fill-[#15307c] bg-gray-100"
+        className="fill-[#15307c] border-gray-100 bg-gray-100"
         viewBox="0 0 1440 57"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

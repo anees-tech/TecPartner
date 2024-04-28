@@ -3,8 +3,8 @@ import React from 'react'
 const Form = () => {
   return (
     <>
-      <section className="flex p-20 flex-wrap bg-gray-100">
-        <div className="flex flex-col gap-[1.5rem] w-[40%] py-8">
+      <section className="flex flex-col-reverse gap-12 py-12 md:p-20 md:flex-row items-center bg-gray-100">
+        <div className="flex flex-col gap-[1.5rem] w-[40%] py-8  ">
           <div className="flex items-center gap-4">
             <div className="rounded-full bg-[#15307c] h-[44px] w-[44px] flex items-center justify-center">
               <svg
@@ -27,7 +27,6 @@ const Form = () => {
             <div>
               <h4 className="text-[18px] font-medium mb-2">Location:</h4>
               <p className="text-[14px] text-gray-500">Lahore, Pakistan</p>
-              <button className="btn glass">Glass button</button>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -89,30 +88,30 @@ const Form = () => {
         <div className="w-[60%]">
           <form action="#">
             <div className="flex flex-wrap gap-4">
-              <div className="w-full flex flex-wrap gap-4">
+              <div className="w-full flex gap-4 lg:flex-nowrap flex-wrap">
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-[47.5%] py-5 px-4 border-2 text-gray-500 border-gray-300"
+                  className="w-full lg:w-[47.5%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
                 />
                 <input
                   type="text"
                   placeholder="Email Address"
-                  className="w-[50%] py-5 px-4 border-2 text-gray-500 border-gray-300"
+                  className="w-full lg:w-[50%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
                 />
               </div>
               <input
                 type="text"
                 placeholder="Subject"
-                className="w-full py-5 px-4 border-2 text-gray-500 border-gray-300"
+                className="w-full py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
               />
               <textarea
                 name="textMessage"
                 id="textMessage"
-                cols="100"
+                // cols="100"
                 placeholder="Message"
-                rows="6"
-                className="w-full max-w-[40] h-auto resize-y-none py-5 px-4 border-2 text-gray-500 border-gray-300"
+                // rows="6"
+                className="w-full max-w-[40] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
               ></textarea>
 
               <button
