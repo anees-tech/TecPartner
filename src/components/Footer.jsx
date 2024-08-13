@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
                 <img src="images/logo.png" alt="logo" className="h-24 w-24 " />
               </Link>
 
-              <div >
+              <div>
                 <div className="flex my-4 gap-4 text-gray-500">
                   <a
                     href="#"
@@ -104,7 +104,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-6 lg:mt-0 lg:flex-1">
-            <div className="flex  gap-24 ">
+            <div className="flex  gap-12 ">
               <div>
                 <h3 className="text-gray-700 uppercase font-bold">
                   Quick Links
@@ -130,26 +130,30 @@ const Footer = () => {
 
               <div>
                 <h3 className="text-gray-700 uppercase font-bold">SERVICES</h3>
-                <Link to="/ContactUs">
+                <Link to="/Services">
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     RPO
                   </span>
                 </Link>
-                <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                  BPO
-                </span>
-                <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                  ITO
-                </span>
+                <Link to="/Services">
+                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                    BPO
+                  </span>
+                </Link>
+                <Link to="/Services">
+                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                    ITO
+                  </span>
+                </Link>
               </div>
 
-              <div className="flex gap-24 flex-wrap">
+              <div className="flex gap-12 flex-wrap">
                 <div>
                   <h3 className="text-gray-700 uppercase font-bold">
                     PAKISTAN OFFICE
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                    +92 300 0000000
+                    +92 333 5535234
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
@@ -164,7 +168,7 @@ const Footer = () => {
                     UAE OFFICE
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                    +92 300 0000000
+                    +971 50 3449802
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
@@ -179,7 +183,22 @@ const Footer = () => {
                     AUSTRALIA OFFICE
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                    +92 300 0000000
+                    +61 410 383 547
+                  </span>
+                  <a
+                    href="mailto:info@tecpartner.net"
+                    className="block mt-2 text-sm text-gray-600 hover:underline"
+                  >
+                    info@tecpartner.net
+                  </a>
+                </div>
+
+                <div>
+                  <h3 className="text-gray-700 uppercase font-bold">
+                    USA OFFICE
+                  </h3>
+                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                    +1 908 589 4700
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
@@ -197,7 +216,7 @@ const Footer = () => {
 
         <div>
           <p className="text-center text-gray-500 dark:text-gray-400">
-            © TechPartner - All rights reserved
+            © TecPartner - All rights reserved
           </p>
         </div>
       </div>
