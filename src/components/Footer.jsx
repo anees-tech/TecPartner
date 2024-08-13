@@ -168,7 +168,7 @@ const Footer = () => {
                     UAE OFFICE
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                    +971 50 3449802
+                    +971 50 344 9802
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
