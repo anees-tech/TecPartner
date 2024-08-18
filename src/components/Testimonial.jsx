@@ -6,7 +6,7 @@ const Testimonial = () => {
     <section className="bg-white ">
       <div className="container px-6 py-24 mx-auto">
         <h1 className="text-2xl font-semibold text-center capitalize lg:text-3xl text-[#15307c] ">
-          Our Clients
+          Our Partners
         </h1>
 
         <p className="max-w-2xl mx-auto mt-6 text-center text-gray-500">

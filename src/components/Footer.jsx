@@ -150,7 +150,7 @@ const Footer = () => {
               <div className="flex gap-12 flex-wrap">
                 <div>
                   <h3 className="text-gray-700 uppercase font-bold">
-                    PAKISTAN OFFICE
+                    PAKISTAN
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     +92 333 5535234
@@ -165,7 +165,7 @@ const Footer = () => {
 
                 <div>
                   <h3 className="text-gray-700 uppercase font-bold">
-                    UAE OFFICE
+                    UAE
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     +971 50 344 9802
@@ -180,7 +180,7 @@ const Footer = () => {
 
                 <div>
                   <h3 className="text-gray-700 uppercase font-bold">
-                    AUSTRALIA OFFICE
+                    AUSTRALIA
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     +61 410 383 547
@@ -195,7 +195,7 @@ const Footer = () => {
 
                 <div>
                   <h3 className="text-gray-700 uppercase font-bold">
-                    USA OFFICE
+                    USA
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     +1 908 589 4700

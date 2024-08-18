@@ -1,20 +1,32 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React from "react";
+import Navbar from "./Navbar";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-
-
+  const [text] = useTypewriter({
+    words: [
+      "IT PARTNER",
+      "BUSINESS PARTNER",
+      "RECRUITMENT PARTNER",
+      "OUTSOURCING PARTNER",
+    ],
+    loop: true,
+  });
 
   return (
     <div>
       <Navbar />
-      <div className=" h-[30rem] bg-[#15307c] flex flex-col justify-end items-center  pb-12 gap-8">
+      <div className="h-[30rem] bg-[#15307c] flex flex-col justify-end items-center pb-12 gap-8">
         <h1 className="text-5xl font-bold flex flex-wrap text-white">
-          ONE STOP BUSINESS SOLUTION
+          ONE STOP <span>&nbsp;{text}</span>
+          <Cursor />
         </h1>
-        <button className="bg-white p-4 rounded-full text-[#15307c]">
-          SEE OUR SERVICES
-        </button>
+        <Link to="/Services">
+          <button className="bg-white p-4 rounded-full text-[#15307c]">
+            SEE OUR SERVICES
+          </button>
+        </Link>
       </div>
       <svg
         className="fill-[#15307c] bg-gray-100"
@@ -26,6 +38,6 @@ const Header = () => {
       </svg>
     </div>
   );
-}
+};
 
-export default Header
+export default Header;
