@@ -1,131 +1,150 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 const Form = () => {
+  const form = useRef();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [formValues, setFormValues] = useState({
+    user_name: "",
+    user_email: "",
+    subject: "",
+    message: "",
+  });
+
+  useEffect(() => {
+    const allFieldsFilled = Object.values(formValues).every(
+      (value) => value.trim() !== ""
+    );
+    setIsButtonDisabled(!allFieldsFilled);
+  }, [formValues]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsButtonDisabled(true); // Disable the button immediately after form submission
+
+    emailjs
+      .sendForm(
+        "service_nugbu5h",
+        "template_h0i4efh",
+        form.current,
+        "PCfsq0WoNEqmJ5Prw"
+      )
+      .then(
+        () => {
+          alert("Email Sent Successfully!");
+          setFormValues({
+            user_name: "",
+            user_email: "",
+            subject: "",
+            message: "",
+          });
+          setTimeout(() => {
+            setIsButtonDisabled(false);
+          }, 2000); // Re-enable the button after 2 seconds
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setIsButtonDisabled(false); // Re-enable the button if there's an error
+        }
+      );
+  };
+
   return (
     <>
-      <section className="flex flex-col-reverse gap-12 py-12 md:p-20 md:flex-row items-center bg-gray-100">
-        <div className="flex flex-col gap-[1.5rem] w-[40%] py-8  ">
-          <div className="flex items-center gap-4">
-            <div className="rounded-full bg-[#15307c] h-[44px] w-[44px] flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-gray-100"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-map-pin"
-              >
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-            </div>
-            <div>
-              <h4 className="text-[18px] font-medium mb-2">Location:</h4>
-              <p className="text-[14px] text-gray-500">Lahore, Pakistan</p>
-            </div>
+      <form ref={form} onSubmit={sendEmail}>
+        <section className="flex flex-col-reverse gap-12 py-12 md:p-20 md:flex-row items-center bg-gray-100">
+          <div className="flex flex-col justify-center items-center gap-[1.5rem] w-[40%] -mt-12">
+            <img src="images/logo.png" alt="LOGO" className="h-48 w-48"/>
+            {/* <div className="flex items-center gap-8 p-12">
+              <div className="rounded-full bg-[#15307c] h-[44px] w-[44px] flex items-center justify-center self-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-map-pin text-gray-100"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <h1 className="text-[20px] mb-2 font-bold text-gray-500 font-mono">
+                  ADDRESS
+                </h1>
+                <h4 className="text-[16px] font-medium mb-2">PAKISTAN</h4>
+                <h4 className="text-[16px] font-medium mb-2">UAE</h4>
+                <h4 className="text-[16px] font-medium mb-2">AUSTRALIA</h4>
+                <h4 className="text-[16px] font-medium mb-2">USA</h4>
+              </div>
+            </div> */}
           </div>
-          <div className="flex items-center gap-4">
-            <div className="rounded-full bg-[#15307c] h-[44px] w-[44px] flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-gray-100"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-history"
-              >
-                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-                <path d="M3 3v5h4" />
-                <path d="M12 7v5l4 2" />
-              </svg>
-            </div>
-            <div>
-              <h4 className="text-[18px] font-medium mb-2">Open Hours:</h4>
-              <p className="text-[14px] text-gray-500">24 / 7 </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="rounded-full bg-[#15307c] h-[44px] w-[44px] flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-gray-100"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-mail"
-              >
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-            </div>
-            <div>
-              <h4 className="text-[18px] font-medium mb-2">Email:</h4>
-              <a
-                href="mailto:support@tecpartner.co"
-                className="text-[14px] text-gray-500"
-              >
-                support@tecpartner.co
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div className="w-[60%]">
-          <form action="#">
+          <div className="w-[60%]">
             <div className="flex flex-wrap gap-4">
               <div className="w-full flex gap-4 lg:flex-nowrap flex-wrap">
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full lg:w-[47.5%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
+                  name="user_name"
+                  className="w-full lg:w-[47.5%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                  value={formValues.user_name}
+                  onChange={handleChange}
                 />
                 <input
                   type="text"
                   placeholder="Email Address"
-                  className="w-full lg:w-[50%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
+                  name="user_email"
+                  className="w-full lg:w-[50%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                  value={formValues.user_email}
+                  onChange={handleChange}
                 />
               </div>
               <input
                 type="text"
                 placeholder="Subject"
-                className="w-full py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
+                name="subject"
+                className="w-full py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                value={formValues.subject}
+                onChange={handleChange}
               />
               <textarea
-                name="textMessage"
                 id="textMessage"
-                // cols="100"
                 placeholder="Message"
-                // rows="6"
-                className="w-full max-w-[40] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300"
+                name="message"
+                className="w-full max-w-[40] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                value={formValues.message}
+                onChange={handleChange}
               ></textarea>
 
               <button
                 type="submit"
-                className="px-4 py-4 bg-[#15307c] text-gray-100 rounded-full "
+                value="Send"
+                className={`px-4 py-4 rounded-full text-gray-100 ${
+                  isButtonDisabled
+                    ? "bg-[#6a8dee] cursor-not-allowed"
+                    : "bg-[#15307c] cursor-pointer"
+                }`}
+                disabled={isButtonDisabled}
               >
-                SEND MESSAGE
+                SEND EMAIL
               </button>
             </div>
-          </form>
-        </div>
-      </section>
+          </div>
+        </section>
+      </form>
     </>
   );
-}
+};
 
-export default Form
+export default Form;

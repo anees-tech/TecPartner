@@ -198,7 +198,7 @@ const Footer = () => {
                     USA
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                    +1 908 589 4700
+                    +1 908 897 3145
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"

@@ -27,7 +27,8 @@ const Services = () => {
             li2="CV Formating"
             li3="Executive Search"
             li4="Database Management"
-            li5="Hire a Recruiter"
+            li5="Staff Augmentation"
+            li6="Hire a Recruiter"
           />
         </section>
       </div>
@@ -65,7 +66,8 @@ const Services = () => {
             li3="Custom Software Development"
             li4="UI/UX Designing"
             li5="Digital Marketing"
-            li6="Hire a Developer"
+            li6="Staff Augmentation"
+            li7="Hire a Developer"
           />
         </section>
       </div>

@@ -4,7 +4,7 @@ const Card = (props) => {
   const { svg, heading, para } = props;
 
   return (
-    <div className="group flex flex-col max-w-sm p-6 shadow-2xl shadow-indigo-300 bg-gray-100 border hover:border-[3px] transition duration-300 hover:zoom hover:border-indigo-500 border-gray-200 rounded-lg h-auto sm:h-[27rem] md:h-[27rem] lg:h-[27rem] xl:h-[27rem]">
+    <div className="group flex flex-col max-w-sm p-6 shadow-2xl shadow-indigo-300 bg-gray-100 border hover:border-[3px] transition duration-1000 hover:zoom hover:border-indigo-500 border-gray-200 rounded-lg h-auto sm:h-[27rem] md:h-[27rem] lg:h-[27rem] xl:h-[27rem]">
       <div
         className="text-[#15307c] py-4"
         dangerouslySetInnerHTML={{ __html: svg }}

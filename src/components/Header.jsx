@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [text] = useTypewriter({
     words: [
-      "IT PARTNER",
+      "TALENT PARTNER",
       "BUSINESS PARTNER",
-      "RECRUITMENT PARTNER",
-      "OUTSOURCING PARTNER",
+      "IT PARTNER",
     ],
     loop: true,
   });
@@ -19,7 +18,7 @@ const Header = () => {
       <Navbar />
       <div className="h-[30rem] bg-[#15307c] flex flex-col justify-end items-center pb-12 gap-8">
         <h1 className="text-5xl font-bold flex flex-wrap text-white">
-          ONE STOP <span>&nbsp;{text}</span>
+          YOUR <span>&nbsp;{text}</span>
           <Cursor />
         </h1>
         <Link to="/Services">

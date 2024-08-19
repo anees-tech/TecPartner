@@ -3,8 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const SliderForHomePage = () => {
-  function Arrows(props) {
-    const { className, style, onClick } = props;
+  function Arrows({ className, style, onClick }) {
     return (
       <div
         className={className}
@@ -35,10 +34,8 @@ const SliderForHomePage = () => {
     prevArrow: <Arrows />,
     pauseOnHover: true,
     swipeToSlide: true,
-    afterChange: function (index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      );
+    afterChange: (index) => {
+      console.log(`Slider Changed to: ${index + 1}`);
     },
 
     responsive: [
@@ -75,19 +72,26 @@ const SliderForHomePage = () => {
         <Slider {...settings}>
           {data.map((item, index) => {
             return (
-              <div className="bg-white h-450px text-black rounded-xl p-4">
-                <div className="h-56 rounded-xl bg-gray-200 flex justify-center items-center">
-                  <img
-                    src={item.img}
-                    alt="image here"
-                    className="h-44 w-44 rounded-full"
-                  />
-                </div>
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="bg-white h-450px text-black rounded-xl p-4">
+                  <div className="h-56 rounded-xl bg-gray-200 flex justify-center items-center">
+                    <img
+                      src={item.img}
+                      alt={item.name}
+                      className="h-44 w-44 rounded-full"
+                    />
+                  </div>
 
-                <div className="flex flex-col justify-center items-center gap-8 p-4">
-                  {/* <p className="text-xl font-semibold">{item.name}</p> */}
+                  <div className="flex flex-col justify-center items-center gap-8 p-4">
+                    <p className="text-xl font-semibold">{item.name}</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </Slider>
@@ -100,26 +104,32 @@ const data = [
   {
     name: `All Pro Estimates`,
     img: `./images/forSlider/all-pro.png`,
+    url: ``,
   },
   {
     name: `UMP Corporation`,
     img: `./images/forSlider/ump.png`,
+    url: `https://umpcorporation.com/`,
   },
   {
     name: `Damas Travels`,
     img: `./images/forSlider/damas.png`,
+    url: `https://www.damastravels.com/`,
   },
   {
     name: `Discount Digital Solution`,
     img: `./images/forSlider/Discount.png`,
-  },
-  {
-    name: `Reak Estate PRO`,
-    img: `./images/forSlider/RE-pro.png`,
+    url: `https://discountdigitalsolution.com/`,
   },
   {
     name: `Apexeon Venture LLC`,
     img: `./images/forSlider/apexeon.png`,
+    url: `https://apexeonventures.com/`,
+  },
+  {
+    name: `Real Estate PRO`,
+    img: `./images/forSlider/RE-pro.png`,
+    url: `https://prore.us/`,
   },
 ];
 
