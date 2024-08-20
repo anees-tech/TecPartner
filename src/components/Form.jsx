@@ -60,34 +60,6 @@ const Form = () => {
         <section className="flex flex-col-reverse gap-12 py-12 md:p-20 md:flex-row items-center bg-gray-100">
           <div className="flex flex-col justify-center items-center gap-[1.5rem] w-[40%] -mt-12">
             <img src="images/logo.png" alt="LOGO" className="h-48 w-48"/>
-            {/* <div className="flex items-center gap-8 p-12">
-              <div className="rounded-full bg-[#15307c] h-[44px] w-[44px] flex items-center justify-center self-start">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-map-pin text-gray-100"
-                >
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </div>
-              <div>
-                <h1 className="text-[20px] mb-2 font-bold text-gray-500 font-mono">
-                  ADDRESS
-                </h1>
-                <h4 className="text-[16px] font-medium mb-2">PAKISTAN</h4>
-                <h4 className="text-[16px] font-medium mb-2">UAE</h4>
-                <h4 className="text-[16px] font-medium mb-2">AUSTRALIA</h4>
-                <h4 className="text-[16px] font-medium mb-2">USA</h4>
-              </div>
-            </div> */}
           </div>
 
           <div className="w-[60%]">
