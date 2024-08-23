@@ -1,7 +1,7 @@
-import React from 'react'
-import HeaderForPages from './HeaderForPages'
-import Footer from './Footer'
-import RenderBar from './RenderBar'
+import React from "react";
+import HeaderForPages from "./HeaderForPages";
+import Footer from "./Footer";
+import RenderBar from "./RenderBar";
 
 const About = () => {
   return (
@@ -14,17 +14,20 @@ const About = () => {
       />
 
       {/* why us */}
-      <div className="flex items-center p-20 gap-8 justify-center bg-gray-100">
-        <div className="w-1/2">
+      <div
+        data-aos="fade-up"
+        className="flex items-center p-20 gap-8 justify-center bg-gray-100"
+      >
+        <div data-aos="fade-right" className="w-1/2">
           <img
             src="images/1.png"
             alt="About Us Section"
             className="w-full h-auto rounded-3xl"
           />
         </div>
-        <div className="w-1/2 p-4">
-          <h3 className="text-2xl font-bold mb-4">Why us</h3>
-          <p className="w-full">
+        <div data-aos="fade-up" className="w-1/2 p-4">
+          <h3 data-aos="fade-up" className="text-2xl delay-200 font-bold mb-4">Why us</h3>
+          <p data-aos="fade-up" className="w-full delay-300">
             TecPartner dedication revolves around creating the ideal bridge
             between talented individuals and their envisioned careers, fostering
             impactful connections that drive organizational success. As a
@@ -40,10 +43,13 @@ const About = () => {
       </div>
 
       {/* Our Story */}
-      <div className="flex items-center p-20 gap-8 justify-center bg-white">
-        <div className="w-1/2 p-4">
-          <h3 className="text-2xl font-bold mb-4">Our Story</h3>
-          <p className="w-full">
+      <div
+        data-aos="fade-up"
+        className="flex items-center p-20 gap-8 justify-center bg-white"
+      >
+        <div data-aos="fade-up" className="w-1/2 p-4">
+          <h3 data-aos="fade-up" className="text-2xl delay-200 font-bold mb-4">Our Story</h3>
+          <p data-aos="fade-up" className="w-full delay-300">
             Founded with a passion for technology, TecPartner began as a small
             group of enthusiasts driven by a shared vision: to bridge the gap
             between people and technology. Over the years, we've grown into a
@@ -51,7 +57,7 @@ const About = () => {
             businesses to thrive in the digital age.
           </p>
         </div>
-        <div className="w-1/2">
+        <div data-aos="fade-left" className="w-1/2">
           <img
             src="images/OurStory.svg"
             alt="About Us Section"
@@ -61,17 +67,20 @@ const About = () => {
       </div>
 
       {/* Our Vision */}
-      <div className="flex items-center p-20 gap-8 justify-center bg-gray-100">
-        <div className="w-1/2">
+      <div
+        data-aos="fade-up"
+        className="flex items-center p-20 gap-8 justify-center bg-gray-100"
+      >
+        <div data-aos="fade-left" className="w-1/2">
           <img
             src="images/Vision.svg"
             alt="About Us Section"
             className="w-full h-auto rounded-3xl"
           />
         </div>
-        <div className="w-1/2 p-4">
-          <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-          <p className="w-full">
+        <div data-aos="fade-up" className="w-1/2 p-4">
+          <h3 data-aos="fade-up" className="text-2xl delay-200 font-bold mb-4">Our Vision</h3>
+          <p data-aos="fade-up" className="w-full delay-300">
             To be a leader in technology solutions, enabling businesses of all
             sizes to harness the power of innovation. We envision a future where
             technology is accessible, reliable, and enhances every aspect of
@@ -81,17 +90,20 @@ const About = () => {
       </div>
 
       {/* Our Mission */}
-      <div className="flex items-center p-20 gap-8 justify-center bg-white">
-        <div className="w-1/2 p-4">
-          <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-          <p className="w-full">
+      <div
+        data-aos="fade-up"
+        className="flex items-center p-20 gap-8 justify-center bg-white"
+      >
+        <div data-aos="fade-up" className="w-1/2 p-4">
+          <h3 data-aos="fade-up" className="text-2xl delay-200 font-bold mb-4">Our Mission</h3>
+          <p data-aos="fade-up" className="w-full delay-300">
             To deliver cutting-edge technology services that meet the evolving
             needs of our clients. We are committed to excellence, continuous
             learning, and building lasting relationships with our customers by
             providing tailored solutions that drive success.
           </p>
         </div>
-        <div className="w-1/2">
+        <div data-aos="fade-up" className="w-1/2 p-4">
           <img
             src="images/Mission.svg"
             alt="About Us Section"
@@ -104,6 +116,6 @@ const About = () => {
       <Footer />
     </>
   );
-}
+};
 
-export default About
+export default About;

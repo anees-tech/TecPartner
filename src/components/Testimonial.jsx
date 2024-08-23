@@ -3,7 +3,7 @@ import SliderForHomePage from "./Slider";
 
 const Testimonial = () => {
   return (
-    <section className="bg-white ">
+    <section data-aos="fade-up" ease-in-out-quart className="bg-white ">
       <div className="container px-6 py-24 mx-auto">
         <h1 className="text-2xl font-semibold text-center capitalize lg:text-3xl text-[#15307c] ">
           Our Partners

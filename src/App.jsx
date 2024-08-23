@@ -9,7 +9,7 @@ import Form from "./components/Form";
 
 function App() {
   return (
-    <>
+    <div className="bg-white">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<About />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="/ContactUs" element={<Contact />} />
         <Route path="/ContactUs/Form" element={<Form />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

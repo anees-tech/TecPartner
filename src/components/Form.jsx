@@ -58,11 +58,14 @@ const Form = () => {
     <>
       <form ref={form} onSubmit={sendEmail}>
         <section className="flex flex-col-reverse gap-12 py-12 md:p-20 md:flex-row items-center bg-gray-100">
-          <div className="flex flex-col justify-center items-center gap-[1.5rem] w-[40%] -mt-12">
-            <img src="images/logo.png" alt="LOGO" className="h-48 w-48"/>
+          <div
+            data-aos="fade-right"
+            className="flex flex-col justify-center items-center gap-[1.5rem] w-[40%] -mt-12"
+          >
+            <img src="images/logo.png" alt="LOGO" className="h-48 w-48" />
           </div>
 
-          <div className="w-[60%]">
+          <div className="w-[60%]" data-aos="fade-up">
             <div className="flex flex-wrap gap-4">
               <div className="w-full flex gap-4 lg:flex-nowrap flex-wrap">
                 <input
@@ -100,9 +103,10 @@ const Form = () => {
               ></textarea>
 
               <button
+                data-aos="fade-up"
                 type="submit"
                 value="Send"
-                className={`px-4 py-4 rounded-full text-gray-100 ${
+                className={`px-4 py-4 delay-75 rounded-full text-gray-100 ${
                   isButtonDisabled
                     ? "bg-[#6a8dee] cursor-not-allowed"
                     : "bg-[#15307c] cursor-pointer"

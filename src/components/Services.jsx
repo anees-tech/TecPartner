@@ -16,6 +16,7 @@ const Services = () => {
 
       <div className="flex items-center bg-gray-100 justify-between 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap">
         <img
+          data-aos="fade-right"
           src="/images/rpo.png"
           alt="Recruitment Process Outsource"
           className="w-2/5 h-auto rounded-3xl"
@@ -46,6 +47,7 @@ const Services = () => {
           />
         </section>
         <img
+          data-aos="fade-left"
           src="/images/BPO.jpg"
           alt="Business Process Outsource"
           className="w-2/5 h-auto rounded-3xl"
@@ -54,6 +56,7 @@ const Services = () => {
 
       <div className="flex items-center bg-gray-100 justify-between gap-4 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap">
         <img
+          data-aos="fade-right"
           src="/images/ito.png"
           alt="Information Technology Outsource"
           className="w-2/5 h-auto rounded-3xl"

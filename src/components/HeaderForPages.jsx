@@ -4,13 +4,18 @@ import Navbar from './Navbar'
 const HeaderForPages = (props) => {
   const { heading, para } = props
   return (
-    <>
+    <div data-aos="fade-up">
       <Navbar />
-      <div className="bg-[#15307c]  h-[25rem] flex flex-col justify-end items-center  pb-12 gap-4">
-        <h1 className="text-5xl font-bold flex flex-wrap text-white">
+      <div className="bg-[#15307c]  h-[30rem] flex flex-col justify-end items-center  pb-12 gap-4">
+        <h1
+          data-aos="fade-up"
+          className="text-5xl delay-200 font-bold flex flex-wrap text-white"
+        >
           {heading}
         </h1>
-        <p className="w-[50%] text-center p-4 text-gray-200">{para}</p>
+        <p data-aos="fade-up" className="w-[50%] delay-300 text-center p-4 text-gray-200">
+          {para}
+        </p>
       </div>
       <svg
         className="fill-[#15307c] border-gray-100 bg-gray-100"
@@ -20,7 +25,7 @@ const HeaderForPages = (props) => {
       >
         <path d="M1440 0H0V57C720 0 1440 57 1440 57V0Z"></path>
       </svg>
-    </>
+    </div>
   );
 }
 
