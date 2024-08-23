@@ -15,7 +15,7 @@ const About = () => {
       <AboutSection
         title="Why Us"
         content="TecPartner dedication revolves around creating the ideal bridge between talented individuals and their envisioned careers, fostering impactful connections that drive organizational success. As a premier recruitment and consulting firm, we go the extra mile to deliver exceptional services to both employers and job seekers. Our people-centric approach recognizes the pivotal role individuals play in thriving companies, and we're here to guide you on the path to discovering the perfect fit that unlocks your true potential. Join us at TecPartner and embark on a transformative journey towards meaningful career connections."
-        imgSrc="images/about.png"
+        imgSrc="images/about.svg"
         imgAlt="About Us Section"
         reverse={false}
       />
