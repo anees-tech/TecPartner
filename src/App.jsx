@@ -7,7 +7,16 @@ import "./index.css";
 import { Routes, Route } from "react-router-dom";
 import Form from "./components/Form";
 
+import Aos from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+
+
 function App() {
+   useEffect(() => {
+     Aos.init({ once: true, duration: 1000 });
+     Aos.refresh();
+   }, []);
   return (
     <div className="bg-white">
       <Routes>
