@@ -9,12 +9,18 @@ const About = () => {
     <>
       <HeaderForPages
         heading="About us"
-        para="At TecPartner, we are dedicated to forging the perfect match between talented individuals and their dream careers. Our passion lies in creating meaningful connections that fuel the success of organizations. As a premier recruiting and consulting firm, we go above and beyond to provide exceptional services to both employers and job seekers. With a focus on people, we understand the pivotal role they play in any thriving company. Let us guide you on your journey to finding the right fit and unlocking your full potential."
+        para="TecPartner is a leading provider of comprehensive outsourcing solutions, specializing in Recruitment Process Outsourcing (RPO), Business Process Outsourcing (BPO), and Information Technology Outsourcing (ITO). Our mission is to empower businesses by streamlining their operations, reducing costs, and enhancing efficiency."
       />
 
       <AboutSection
-        title="Why Us"
-        content="TecPartner dedication revolves around creating the ideal bridge between talented individuals and their envisioned careers, fostering impactful connections that drive organizational success. As a premier recruitment and consulting firm, we go the extra mile to deliver exceptional services to both employers and job seekers. Our people-centric approach recognizes the pivotal role individuals play in thriving companies, and we're here to guide you on the path to discovering the perfect fit that unlocks your true potential. Join us at TecPartner and embark on a transformative journey towards meaningful career connections."
+        title="Why Choose TecPartner?"
+        content="TecPartner offers a team of industry experts with a proven track record of delivering 
+        <strong>successful outsourcing solutions</strong>. Our <strong>expertise and experience</strong> 
+        allow us to provide <strong>customized outsourcing services</strong> that are tailored to meet your unique business needs and objectives. 
+        We ensure the <strong>quality and efficiency</strong> of our operations, helping you maintain high standards while optimizing processes. 
+        Our <strong>cost-effective outsourcing solutions</strong> are designed to reduce your business expenses and improve your bottom line. 
+        With a strong commitment to <strong>customer satisfaction</strong>, we focus on building long-lasting partnerships that drive business success. 
+        Partner with TecPartner to streamline your operations, reduce costs, and focus on what you do best while achieving your business goals."
         imgSrc="images/about.svg"
         imgAlt="About Us Section"
         reverse={false}
@@ -22,7 +28,7 @@ const About = () => {
 
       <AboutSection
         title="Our Story"
-        content="Founded with a passion for technology, TecPartner began as a small group of enthusiasts driven by a shared vision: to bridge the gap between people and technology. Over the years, we've grown into a trusted partner, offering innovative solutions that empower businesses to thrive in the digital age."
+        content="TecPartner was founded with a deep passion for technology, starting as a small group of enthusiasts with a shared vision: to bridge the gap between people and technology. Over the years, we have evolved into a trusted technology partner, offering innovative solutions that empower businesses to thrive in the digital age. Our commitment to bridging technology and business has made us a reliable resource for companies looking to excel in today’s tech-driven world."
         imgSrc="images/OurStory.svg"
         imgAlt="Our Story Section"
         reverse={true}
@@ -30,7 +36,7 @@ const About = () => {
 
       <AboutSection
         title="Our Vision"
-        content="To be a leader in technology solutions, enabling businesses of all sizes to harness the power of innovation. We envision a future where technology is accessible, reliable, and enhances every aspect of life and work."
+        content="To be a global leader in outsourcing solutions, empowering businesses to achieve their full potential through innovative and efficient services. We strive to create lasting partnerships, foster a culture of excellence, and drive continuous improvement in all aspects of our operations."
         imgSrc="images/Vision.svg"
         imgAlt="Our Vision Section"
         reverse={false}
@@ -38,7 +44,7 @@ const About = () => {
 
       <AboutSection
         title="Our Mission"
-        content="To deliver cutting-edge technology services that meet the evolving needs of our clients. We are committed to excellence, continuous learning, and building lasting relationships with our customers by providing tailored solutions that drive success."
+        content="To provide exceptional outsourcing solutions that deliver tangible value to our clients. We are committed to exceeding expectations, fostering a culture of innovation, and contributing to the success of our partners and communities."
         imgSrc="images/Mission.svg"
         imgAlt="Our Mission Section"
         reverse={true}

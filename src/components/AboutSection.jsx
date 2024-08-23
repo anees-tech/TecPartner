@@ -21,9 +21,11 @@ const AboutSection = ({ title, content, imgSrc, imgAlt, reverse }) => {
         <h3 data-aos="fade-up" className="text-2xl delay-200 font-bold mb-4">
           {title}
         </h3>
-        <p data-aos="fade-up" className="w-full delay-300">
-          {content}
-        </p>
+        <p
+          data-aos="fade-up"
+          className="w-full delay-300"
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></p>
       </div>
       {reverse && (
         <div data-aos="fade-left" className="w-1/2">

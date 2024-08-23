@@ -58,7 +58,7 @@ const Services = () => {
     <>
       <HeaderForPages
         heading="Our services"
-        para="TecPartner is a recruiting and consulting firm passionate about connecting talented individuals with their dream careers. Easetalent understands that people are at the heart of every successful organization, and we strive to create meaningful connections between employers and job seekers by providing exceptional recruiting and consultation services."
+        para="At TecPartner, we're dedicated to connecting exceptional talent with thriving organizations. As a leading recruiting and consulting firm, we understand that people are the cornerstone of business success. Our mission is to create meaningful partnerships between employers and job seekers, fostering a culture of growth and innovation."
       />
 
       {serviceData.map((service, index) => (

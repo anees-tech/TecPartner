@@ -7,12 +7,17 @@ import Form from './Form'
 const Contact = () => {
   return (
     <>
-      <HeaderForPages heading={"Unlock a world of possibilities with us"} para={"Thank you for considering TecPartner as your premier recruiting and consultancy partner. Whether you're a skilled professional seeking new opportunities or an organization in need of exceptional talent, Easetalent is here to support you."} />
-      <Form/>
-      <RenderBar/>
-      <Footer/>
+      <HeaderForPages
+        heading={"Unlock a world of possibilities with TecPartner"}
+        para={
+          " Thank you for considering us as your premier recruiting and consultancy partner. Whether you're a skilled professional seeking new career opportunities or an organization in need of exceptional talent, TecPartner is here to support your journey. Our expertise in talent acquisition and consulting services ensures that both job seekers and employers find the perfect match to achieve their goals."
+        }
+      />
+      <Form />
+      <RenderBar />
+      <Footer />
     </>
-  )
+  );
 }
 
 export default Contact
