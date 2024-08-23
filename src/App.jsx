@@ -10,6 +10,7 @@ import Form from "./components/Form";
 import Aos from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
+import NotFound from "./components/NotFound";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/Career" element={<Career />} />
         <Route path="/ContactUs" element={<Contact />} />
         <Route path="/ContactUs/Form" element={<Form />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </div>
   );

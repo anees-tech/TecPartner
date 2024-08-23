@@ -4,76 +4,91 @@ import Footer from "./Footer";
 import RenderBar from "./RenderBar";
 import ServicesDetails from "./ServicesDetails";
 
+const serviceData = [
+  {
+    title: "Recruitment Process Outsource",
+    imgSrc: "/images/rpo.png",
+    imgAlt: "Recruitment Process Outsource",
+    items: [
+      "CV Sourcing",
+      "CV Formating",
+      "Executive Search",
+      "Database Management",
+      "Staff Augmentation",
+      "Hire a Recruiter",
+    ],
+    animation: "fade-right",
+    reverse: false,
+  },
+  {
+    title: "Business Process Outsource",
+    imgSrc: "/images/BPO.jpg",
+    imgAlt: "Business Process Outsource",
+    items: [
+      "Lead Generation",
+      "Virtual Assistant",
+      "Data Entry",
+      "Customer Support",
+      "CRM Administration",
+      "Hire a Virtual Assistant",
+    ],
+    animation: "fade-left",
+    reverse: true,
+  },
+  {
+    title: "Information Technology Outsource",
+    imgSrc: "/images/ito.png",
+    imgAlt: "Information Technology Outsource",
+    items: [
+      "Web Development",
+      "App Development",
+      "Custom Software Development",
+      "UI/UX Designing",
+      "Digital Marketing",
+      "Staff Augmentation",
+      "Hire a Developer",
+    ],
+    animation: "fade-right",
+    reverse: false,
+  },
+];
+
 const Services = () => {
   return (
     <>
       <HeaderForPages
-        heading={"Our services"}
-        para={
-          "TecPartner is a recruiting and consulting firm passionate about connecting talented individuals with their dream careers. Easetalent understands that people are at the heart of every successful organization, and we strive to create meaningful connections between employers and job seekers by providing exceptional recruiting and consultation services."
-        }
+        heading="Our services"
+        para="TecPartner is a recruiting and consulting firm passionate about connecting talented individuals with their dream careers. Easetalent understands that people are at the heart of every successful organization, and we strive to create meaningful connections between employers and job seekers by providing exceptional recruiting and consultation services."
       />
 
-      <div className="flex items-center bg-gray-100 justify-between 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap">
-        <img
-          data-aos="fade-right"
-          src="/images/rpo.png"
-          alt="Recruitment Process Outsource"
-          className="w-2/5 h-auto rounded-3xl"
-        />
-        <section className="h-full flex flex-col gap-6">
-          <ServicesDetails
-            h3="Recruitment Process Outsource"
-            li1="CV Sourcing"
-            li2="CV Formating"
-            li3="Executive Search"
-            li4="Database Management"
-            li5="Staff Augmentation"
-            li6="Hire a Recruiter"
-          />
-        </section>
-      </div>
-
-      <div className="flex items-center bg-white justify-between gap-4 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap">
-        <section className="h-full flex flex-col gap-6">
-          <ServicesDetails
-            h3="Business Process Outsource"
-            li1="Lead Generation"
-            li2="Virtual Assistant"
-            li3="Data Entry"
-            li4="Customer Support"
-            li5="CRM Administration"
-            li6="Hire a Virtual Assistant"
-          />
-        </section>
-        <img
-          data-aos="fade-left"
-          src="/images/BPO.jpg"
-          alt="Business Process Outsource"
-          className="w-2/5 h-auto rounded-3xl"
-        />
-      </div>
-
-      <div className="flex items-center bg-gray-100 justify-between gap-4 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap">
-        <img
-          data-aos="fade-right"
-          src="/images/ito.png"
-          alt="Information Technology Outsource"
-          className="w-2/5 h-auto rounded-3xl"
-        />
-        <section className="h-full flex flex-col gap-6">
-          <ServicesDetails
-            h3="Information Technology Outsource"
-            li1="Web Development"
-            li2="App Development"
-            li3="Custom Software Development"
-            li4="UI/UX Designing"
-            li5="Digital Marketing"
-            li6="Staff Augmentation"
-            li7="Hire a Developer"
-          />
-        </section>
-      </div>
+      {serviceData.map((service, index) => (
+        <div
+          key={index}
+          className={`flex items-center justify-between gap-4 ${
+            service.reverse ? "bg-white" : "bg-gray-100"
+          } 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap`}
+        >
+          {!service.reverse && (
+            <img
+              data-aos={service.animation}
+              src={service.imgSrc}
+              alt={service.imgAlt}
+              className="w-2/5 h-auto rounded-3xl"
+            />
+          )}
+          <section className="h-full flex flex-col gap-6">
+            <ServicesDetails h3={service.title} items={service.items} />
+          </section>
+          {service.reverse && (
+            <img
+              data-aos={service.animation}
+              src={service.imgSrc}
+              alt={service.imgAlt}
+              className="w-2/5 h-auto rounded-3xl"
+            />
+          )}
+        </div>
+      ))}
 
       <RenderBar />
       <Footer />
