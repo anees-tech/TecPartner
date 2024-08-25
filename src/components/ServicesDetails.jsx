@@ -1,6 +1,6 @@
 import React from "react";
 
-const ServicesDetails = ({ h3, items }) => {
+const ServicesDetails = ({ h3, itemsHeading, itemsDetails }) => {
   return (
     <div data-aos="fade-up">
       <h3
@@ -13,8 +13,10 @@ const ServicesDetails = ({ h3, items }) => {
         data-aos="fade-up"
         className="flex flex-col gap-2 delay-300 text-gray-500 font-semibold cursor-pointer"
       >
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
+        {itemsHeading.map((heading, index) => (
+          <li key={index}>
+            <strong>{heading}:</strong> {itemsDetails[index]}
+          </li>
         ))}
       </ul>
     </div>
