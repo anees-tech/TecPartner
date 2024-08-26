@@ -5,7 +5,7 @@ const ServicesDetails = ({ h3, itemsHeading, itemsDetails }) => {
     <div data-aos="fade-up">
       <h3
         data-aos="fade-up"
-        className="text-2xl delay-100 text-violet-800 font-bold cursor-pointer pb-4"
+        className="text-2xl delay-100 text-[#15307c] font-bold cursor-pointer pb-4"
       >
         {h3}
       </h3>
@@ -14,7 +14,7 @@ const ServicesDetails = ({ h3, itemsHeading, itemsDetails }) => {
         className="flex flex-col gap-2 delay-300 text-gray-500 font-semibold cursor-pointer"
       >
         {itemsHeading.map((heading, index) => (
-          <li key={index}>
+          <li key={index} className="text-justify">
             <strong>{heading}:</strong> {itemsDetails[index]}
           </li>
         ))}

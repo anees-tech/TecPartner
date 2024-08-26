@@ -29,7 +29,7 @@ const serviceData = [
     reverse: false,
   },
   {
-    title: "Business Process Outsource",
+    title: "Our BPO Services:",
     imgSrc: "/images/BPO.jpg",
     imgAlt: "Business Process Outsource",
     itemsHeading: [
@@ -52,7 +52,7 @@ const serviceData = [
     reverse: true,
   },
   {
-    title: "Information Technology Outsource",
+    title: "Our ITO Services:",
     imgSrc: "/images/ito.png",
     imgAlt: "Information Technology Outsource",
     itemsHeading: [

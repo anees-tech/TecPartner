@@ -164,9 +164,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase font-bold">
-                    UAE
-                  </h3>
+                  <h3 className="text-gray-700 uppercase font-bold">UAE</h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     +971 50 344 9802
                   </span>
@@ -183,7 +181,7 @@ const Footer = () => {
                     AUSTRALIA
                   </h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
-                    +61 410 383 547
+                    +61 410 686 748
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
@@ -194,9 +192,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase font-bold">
-                    USA
-                  </h3>
+                  <h3 className="text-gray-700 uppercase font-bold">USA</h3>
                   <span className="block mt-2 text-sm text-gray-600 hover:underline">
                     +1 908 897 3145
                   </span>

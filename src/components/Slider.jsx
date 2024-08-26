@@ -104,9 +104,9 @@ const data = [
     url: `https://allproestimates.com/`,
   },
   {
-    name: `UMP Corporation`,
-    img: `./images/forSlider/ump.png`,
-    url: `https://umpcorporation.com/`,
+    name: `BTMEC`,
+    img: `./images/forSlider/btmec.png`,
+    url: `https://www.btmec.com.au/`,
   },
   {
     name: `Damas Travels`,
@@ -124,14 +124,14 @@ const data = [
     url: `https://apexeonventures.com/`,
   },
   {
+    name: `UMP Corporation`,
+    img: `./images/forSlider/ump.png`,
+    url: `https://umpcorporation.com/`,
+  },
+  {
     name: `Real Estate PRO`,
     img: `./images/forSlider/RE-pro.png`,
     url: `https://prore.us/`,
-  },
-  {
-    name: `BTMEC`,
-    img: `./images/forSlider/btmec.png`,
-    url: `https://www.btmec.com.au/`,
   },
 ];
 
