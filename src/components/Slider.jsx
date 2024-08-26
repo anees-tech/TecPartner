@@ -43,7 +43,6 @@ const SliderForHomePage = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
           infinite: true,
           dots: true,
         },
@@ -52,7 +51,6 @@ const SliderForHomePage = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
           initialSlide: 2,
         },
       },
@@ -60,7 +58,6 @@ const SliderForHomePage = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
@@ -104,7 +101,7 @@ const data = [
   {
     name: `All Pro Estimates`,
     img: `./images/forSlider/all-pro.png`,
-    url: ``,
+    url: `https://allproestimates.com/`,
   },
   {
     name: `UMP Corporation`,
@@ -130,6 +127,11 @@ const data = [
     name: `Real Estate PRO`,
     img: `./images/forSlider/RE-pro.png`,
     url: `https://prore.us/`,
+  },
+  {
+    name: `BTMEC`,
+    img: `./images/forSlider/btmec.png`,
+    url: `https://www.btmec.com.au/`,
   },
 ];
 
