@@ -4,7 +4,7 @@ import Contact from "./components/Contact";
 import Services from "./components/Services";
 import Career from "./components/Career";
 import NotFound from "./components/NotFound";
-import IndivisualSecvice from "./components/IndivisualSecvice";
+import IndivisualService from "./components/IndivisualSecvice";
 import Form from "./components/Form";
 import "./index.css";
 import "aos/dist/aos.css";
@@ -30,7 +30,7 @@ function App() {
         <Route path="/ContactUs/Form" element={<Form />} />
         <Route
           path="/service-detail/:serviceType"
-          element={<IndivisualSecvice />}
+          element={<IndivisualService />}
         />
         <Route path="/*" element={<NotFound />} />
       </Routes>

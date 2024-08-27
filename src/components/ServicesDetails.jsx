@@ -5,7 +5,7 @@ const ServicesDetails = ({ h3, itemsHeading, itemsDetails }) => {
     <div data-aos="fade-up">
       <h3
         data-aos="fade-up"
-        className="text-2xl delay-100 text-[#15307c] font-bold cursor-pointer pb-4"
+        className="text-2xl delay-100 text-[#15307c] font-bold pb-4"
       >
         {h3}
       </h3>

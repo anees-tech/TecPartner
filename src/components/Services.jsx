@@ -4,8 +4,9 @@ import Footer from "./Footer";
 import RenderBar from "./RenderBar";
 import ServicesDetails from "./ServicesDetails";
 
-const serviceData = [
+export const serviceData = [
   {
+    serviceType: "rpo",
     title: "Our RPO Services:",
     imgSrc: "/images/rpo.png",
     imgAlt: "Recruitment Process Outsource",
@@ -17,7 +18,7 @@ const serviceData = [
       "Staff Augmentation",
       "Hire a Recruiter",
     ],
-    itemsDetials: [
+    itemsDetails: [
       "Our expert recruiters leverage advanced sourcing techniques to identify and attract highly qualified candidates from diverse talent pools.",
       "We ensure that your candidates' resumes are formatted professionally and consistently, making them stand out in the application process.",
       "For critical leadership positions, our executive search team utilizes specialized methodologies to find exceptional talent who can drive your organization forward.",
@@ -29,6 +30,7 @@ const serviceData = [
     reverse: false,
   },
   {
+    serviceType: "bpo",
     title: "Our BPO Services:",
     imgSrc: "/images/BPO.jpg",
     imgAlt: "Business Process Outsource",
@@ -40,7 +42,7 @@ const serviceData = [
       "CRM Administration",
       "Hire a Virtual Assistant",
     ],
-    itemsDetials: [
+    itemsDetails: [
       "Our skilled professionals can generate high-quality leads for your business, driving sales and growth.",
       "Our virtual assistants can handle a wide range of administrative tasks, freeing up your time to focus on core business activities.",
       "Our data entry experts can accurately and efficiently input data into your systems, ensuring data integrity and reliability",
@@ -52,6 +54,7 @@ const serviceData = [
     reverse: true,
   },
   {
+    serviceType: "ito",
     title: "Our ITO Services:",
     imgSrc: "/images/ito.png",
     imgAlt: "Information Technology Outsource",
@@ -64,7 +67,7 @@ const serviceData = [
       "Staff Augmentation",
       "Hire a Developer",
     ],
-    itemsDetials: [
+    itemsDetails: [
       "Our skilled developers can create custom websites that are visually appealing, user-friendly, and optimized for search engines.",
       "We specialize in developing innovative mobile and web applications that meet your business objectives.",
       " Our team can design and build custom software solutions to streamline your operations and improve efficiency.",
@@ -105,7 +108,7 @@ const Services = () => {
             <ServicesDetails
               h3={service.title}
               itemsHeading={service.itemsHeading}
-              itemsDetails={service.itemsDetials}
+              itemsDetails={service.itemsDetails}
             />
           </section>
           {service.reverse && (

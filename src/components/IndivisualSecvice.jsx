@@ -1,6 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import HeaderForPages from "./HeaderForPages";
+import { serviceData } from "./Services";
+import Footer from "./Footer";
+import RenderBar from "./RenderBar";
 
 const serviceDetails = {
   rpo: {
@@ -77,6 +80,10 @@ const IndivisualSecvice = () => {
   const { serviceType } = useParams();
   const service = serviceDetails[serviceType] || {};
 
+  const filteredServiceData = serviceData.filter(
+    (ser) => ser.serviceType === serviceType
+  );
+  console.log(filteredServiceData);
   return (
     <div className="bg-gray-100 text-gray-500">
       <HeaderForPages heading={service.heading || "Service not found."} />
@@ -106,6 +113,23 @@ const IndivisualSecvice = () => {
                 ></li>
               ))}
             </ul>
+
+            {filteredServiceData.map((ser, index) => (
+              <div key={service} className="pb-8">
+                <h3 className="text-2xl delay-100 text-[#15307c] font-bold pb-4">
+                  {ser.title}
+                </h3>
+
+                <ul className="flex flex-col gap-2 delay-300 text-gray-500 font-semibold cursor-pointer">
+                  {ser.itemsHeading.map((heading, index) => (
+                    <li key={index} className="text-justify">
+                      <strong>{heading}:</strong> {ser.itemsDetails[index]}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
             <p className="border-y-[1px] border-gray-400 py-4 border-solid">
               {service.conclusion}
             </p>
@@ -114,6 +138,8 @@ const IndivisualSecvice = () => {
           <p>Service not found.</p>
         )}
       </div>
+      <RenderBar/>
+      <Footer />
     </div>
   );
 };
