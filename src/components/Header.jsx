@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div data-aos="fade-up">
       <Navbar />
-      <div className="h-[30rem] bg-[#15307c] flex flex-col justify-end items-center pb-12 gap-8">
+      <div className="h-[30rem] bg-[#15307c] flex flex-col justify-end items-center pb-12 md:pb-28 gap-8">
         <h1
           data-aos="fade-up"
           className="text-5xl delay-100 font-bold flex flex-wrap text-white"
