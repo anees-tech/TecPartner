@@ -86,7 +86,7 @@ const IndivisualSecvice = () => {
   console.log(filteredServiceData);
   return (
     <div className="bg-gray-100 text-gray-500">
-      <HeaderForPages heading={service.heading || "Service not found."} />
+      <HeaderForPages heading={service.heading || "Service not found."}/>
       <div className="p-10">
         {service.heading ? (
           <>

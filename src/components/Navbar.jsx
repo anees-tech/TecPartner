@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isNavbarOpen, setNavbarOpen] = useState(false);
 
+  useEffect(() => {
+    if (isNavbarOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isNavbarOpen]);
+
 
   const toggleNavbar = () => {
-    setNavbarOpen(!isNavbarOpen);
+    setNavbarOpen((prevState) => !prevState);
   };
+
+  const linkClasses =
+    "block py-2 text-[#15307c] hover:bg-[#15307c] hover:text-white rounded-full px-4 duration-500";
 
   return (
     <nav className=" mirror h-18 bg-white border-gray-200 scroll-smooth focus:scroll-auto shadow-lg	 fixed w-full z-30 ">
@@ -20,6 +31,7 @@ const Navbar = () => {
         <button
           onClick={toggleNavbar}
           type="button"
+          aria-label="Toggle navigation menu"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg md:hidden text-[#15307c] focus:outline-none focus:ring-2 focus:ring-[#9eafd6] "
           aria-controls="navbar-multi-level"
           aria-expanded={isNavbarOpen}
@@ -34,9 +46,9 @@ const Navbar = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
@@ -47,50 +59,72 @@ const Navbar = () => {
           } w-full md:block md:w-auto`}
           id="navbar-multi-level"
         >
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[#9eafd6] rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[#9eafd6] rounded-lg md:flex-row md:mt-0 md:border-0 space-x-3 rtl:space-x-4">
             {/* Home */}
-            <li>
-              <Link
-                to="/"
-                className="block py-2 text-[#15307c] hover:text-[#728bc5]  duration-500 rounded"
-                aria-current="page"
-              >
+            <li className="px-3">
+              <Link to="/" className={linkClasses}  aria-current="page">
                 Home
               </Link>
             </li>
             {/* about */}
             <li>
-              <Link
-                to="/AboutUs"
-                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
-              >
+              <Link to="/AboutUs" className={linkClasses}>
                 About Us
               </Link>
             </li>
             {/* Services */}
             <li>
-              <Link
-                to="/Services"
-                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
-              >
-                Services
+              <Link to="/services">
+                <div className="dropdown dropdown-hover w-full">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="flex gap-2 items-center justify-start py-2 text-[#15307c] hover:bg-[#15307c] hover:text-white rounded-full px-4 duration-500 border-transparent border-0"
+                  >
+                    <h3>Services</h3>
+                    <svg
+                      className="h-4 mt-1"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      fill="#15307c"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu rounded-box z-[1] w-52 p-2 bg-white shadow-lg shadow-[#15307c]"
+                  >
+                    <li className="text-[#15307c] hover:bg-[#15307c] hover:text-white rounded transition ease-in-out duration-500 focus:bg-[#15307c]">
+                      <Link to="/service-detail/rpo">RPO</Link>
+                    </li>
+                    <li className="text-[#15307c] hover:bg-[#15307c] hover:text-white rounded-lg transition ease-in-out duration-500">
+                      <Link to="/service-detail/bpo">BPO</Link>
+                    </li>
+                    <li className="text-[#15307c] hover:bg-[#15307c] hover:text-white rounded-lg transition ease-in-out duration-500">
+                      <Link to="/service-detail/ito">ITO</Link>
+                    </li>
+                  </ul>
+                </div>
               </Link>
             </li>
             {/* Career */}
             <li>
-              <Link
-                to="/Career"
-                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
-              >
+              <Link to="/Career" className={linkClasses}>
                 Career
               </Link>
             </li>
             {/* Contact */}
             <li>
-              <Link
-                to="/ContactUs"
-                className="block py-2 text-[#15307c] hover:text-[#728bc5] duration-500 rounded"
-              >
+              <Link to="/ContactUs" className={linkClasses}>
                 Contact Us
               </Link>
             </li>

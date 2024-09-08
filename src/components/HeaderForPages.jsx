@@ -7,7 +7,7 @@ const HeaderForPages = (props) => {
   return (
     <div data-aos="fade-up">
       <Navbar />
-      <div className="bg-[#15307c] h-[30rem] flex flex-col justify-center sm:justify-end items-center pb-12 sm:pb-16 gap-4">
+      <div className="bg-[#15307c] h-[30rem] flex flex-col justify-center sm:justify-end items-center pb-12 sm:pb-24 gap-4">
         <h1
           data-aos="fade-up"
           className="text-4xl -mb-24 sm:m-0 sm:p-0 sm:text-4xl xs:text-3xl p-8 font-bold flex flex-wrap text-white"

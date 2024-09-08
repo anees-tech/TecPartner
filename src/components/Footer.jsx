@@ -15,7 +15,9 @@ const Footer = () => {
               <div>
                 <div className="flex my-4 gap-4 text-gray-500">
                   <a
-                    href="#"
+                    href="mailto:info@tecpartner.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-gray-700 hover:underline flex gap-2"
                   >
                     <svg
@@ -23,6 +25,7 @@ const Footer = () => {
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
+                      color="black"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
@@ -36,11 +39,14 @@ const Footer = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/tec-partner/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-gray-700 hover:underline flex gap-2"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
+                      color="black"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
@@ -59,6 +65,8 @@ const Footer = () => {
 
                   <a
                     href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-gray-700 hover:underline flex gap-2"
                   >
                     <svg
@@ -67,6 +75,7 @@ const Footer = () => {
                       height="24"
                       viewBox="0 0 24 24"
                       fill="none"
+                      color="black"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -78,8 +87,10 @@ const Footer = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.instagram.com/tec.partner?utm_source=qr&igsh=Nnhncm0zcXNndzJu"
                     className="hover:text-gray-700 hover:underline flex gap-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -87,6 +98,7 @@ const Footer = () => {
                       height="24"
                       viewBox="0 0 24 24"
                       fill="none"
+                      color="black"
                       stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
@@ -97,6 +109,19 @@ const Footer = () => {
                       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                     </svg>
+                  </a>
+
+                  <a
+                    href="https://api.whatsapp.com/send?phone=923335535234"
+                    className="hover:text-gray-700 hover:underline flex gap-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="images/whatsapp.png"
+                      alt="whatsapp"
+                      className="h-6 w-6 text-pink-50"
+                    />
                   </a>
                 </div>
               </div>
