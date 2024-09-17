@@ -64,7 +64,7 @@ const SliderForHomePage = () => {
   };
 
   return (
-    <div data-aos="fade" className="w-4/4 m-auto px-2">
+    <div data-aos="fade" className="w-4/4 m-auto px-2" draggable="false">
       <div className="mt-20">
         <Slider {...settings}>
           {data.map((item, index) => {

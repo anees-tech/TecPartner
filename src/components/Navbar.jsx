@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import HeaderTopBar from "./HeaderTopBar";
 
 const Navbar = () => {
   const [isNavbarOpen, setNavbarOpen] = useState(false);
@@ -12,7 +13,6 @@ const Navbar = () => {
     }
   }, [isNavbarOpen]);
 
-
   const toggleNavbar = () => {
     setNavbarOpen((prevState) => !prevState);
   };
@@ -21,7 +21,10 @@ const Navbar = () => {
     "block py-2 text-[#15307c] hover:bg-[#15307c] hover:text-white rounded-full px-4 duration-500";
 
   return (
-    <nav className=" mirror h-18 bg-white border-gray-200 scroll-smooth focus:scroll-auto shadow-lg	 fixed w-full z-30 ">
+    <nav className=" mirror  h-18 bg-white border-gray-200 scroll-smooth focus:scroll-auto shadow-lg	 fixed w-full z-30 ">
+      <div className="hidden sm:block">
+        <HeaderTopBar />
+      </div>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
         <span className=" h-16 w-28 p-4 self-center text-2xl font-semibold whitespace-nowrap text-white flex items-center space-x-3 rtl:space-x-reverse">
           <Link to="/">
@@ -62,7 +65,7 @@ const Navbar = () => {
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-[#9eafd6] rounded-lg md:flex-row md:mt-0 md:border-0 space-x-3 rtl:space-x-4">
             {/* Home */}
             <li className="px-3">
-              <Link to="/" className={linkClasses}  aria-current="page">
+              <Link to="/" className={linkClasses} aria-current="page">
                 Home
               </Link>
             </li>
@@ -119,7 +122,7 @@ const Navbar = () => {
             {/* Career */}
             <li>
               <Link to="/Career" className={linkClasses}>
-                Career
+                Careers
               </Link>
             </li>
             {/* Contact */}

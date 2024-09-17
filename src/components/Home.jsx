@@ -33,16 +33,23 @@ function Home() {
   return (
     <div>
       <Header />
-      <div
-        data-aos="fade-up"
-        className="flex items-center bg-gray-100 justify-center xl:flex-nowrap gap-4 2xl:p-24 xl:p-24 md:p-24 lg:p-24 sm:p-24 p-4 flex-wrap"
-      >
-        {svgIcons.map((icon, index) => (
-          <div key={index} data-aos={icon.animation}>
-            <Card svg={icon.svg} heading={icon.heading} para={icon.para} serviceType={icon.serviceType}/>
-          </div>
-        ))}
-      </div>
+      <section className="services-grid flex items-center justify-center w-full bg-gray-100">
+        <div
+          data-aos="fade-up"
+          className="grid items-center justify-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-24"
+        >
+          {svgIcons.map((icon, index) => (
+            <div key={index} data-aos={icon.animation}>
+              <Card
+                svg={icon.svg}
+                heading={icon.heading}
+                para={icon.para}
+                serviceType={icon.serviceType}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
       <Testimonial />
       <RenderBar />
       <Footer />
