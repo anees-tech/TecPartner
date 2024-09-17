@@ -3,6 +3,7 @@ import Card from "./Card";
 import Footer from "./Footer";
 import RenderBar from "./RenderBar";
 import Testimonial from "./Testimonial";
+import ScrollToTop from "./ScrollToTop";
 
 // Define SVG icons in an array for better management
 const svgIcons = [
@@ -53,6 +54,9 @@ function Home() {
       <Testimonial />
       <RenderBar />
       <Footer />
+      <div className="flex items-center w-full justify-center">
+        <ScrollToTop />
+      </div>
     </div>
   );
 }
