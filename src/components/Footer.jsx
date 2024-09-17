@@ -4,7 +4,8 @@ import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   let color = "black";
-  let width = 2;
+  let width = 1.5;
+  let heightAndWidth = 24;
   return (
     <footer className="bg-white">
       <div className="container px-6 py-12 pb-6 mx-auto">
@@ -15,7 +16,7 @@ const Footer = () => {
                 <img src="images/logo.png" alt="logo" className="h-24 w-24 " />
               </Link>
 
-              <SocialLinks color={color} width={width}/>
+              <SocialLinks color={color} width={width} heightAndWidth={heightAndWidth}/>
               
             </div>
           </div>
