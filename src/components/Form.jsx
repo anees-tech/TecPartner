@@ -57,7 +57,7 @@ const Form = () => {
   return (
     <>
       <form ref={form} onSubmit={sendEmail}>
-        <section className="flex flex-col-reverse gap-12 py-12 md:p-20 md:flex-row items-center bg-gray-100">
+        <section className="flex flex-col-reverse gap-12 py-12 md:p-20 md:flex-row items-center bg-gray-100 ">
           <div
             data-aos="fade-right"
             className="flex flex-col justify-center items-center gap-[1.5rem] w-[40%] -mt-12"
@@ -72,7 +72,7 @@ const Form = () => {
                   type="text"
                   placeholder="Name"
                   name="user_name"
-                  className="w-full lg:w-[47.5%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                  className="w-full lg:w-[47.5%] py-5 px-4 border-2 text-gray-700 border-gray-300 bg-gray-300 rounded-md"
                   value={formValues.user_name}
                   onChange={handleChange}
                 />
@@ -80,7 +80,7 @@ const Form = () => {
                   type="text"
                   placeholder="Email Address"
                   name="user_email"
-                  className="w-full lg:w-[50%] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                  className="w-full lg:w-[50%] py-5 px-4 border-2 text-gray-700 border-gray-300 bg-gray-300 rounded-md"
                   value={formValues.user_email}
                   onChange={handleChange}
                 />
@@ -89,7 +89,7 @@ const Form = () => {
                 type="text"
                 placeholder="Subject"
                 name="subject"
-                className="w-full py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                className="w-full py-5 px-4 border-2 text-gray-700 border-gray-300 bg-gray-300 rounded-md"
                 value={formValues.subject}
                 onChange={handleChange}
               />
@@ -97,13 +97,12 @@ const Form = () => {
                 id="textMessage"
                 placeholder="Message"
                 name="message"
-                className="w-full max-w-[40] py-5 px-4 border-2 text-gray-500 border-gray-300 bg-gray-300 rounded-md"
+                className="w-full max-w-[40] py-5 px-4 border-2 text-gray-700 border-gray-300 bg-gray-300 rounded-md"
                 value={formValues.message}
                 onChange={handleChange}
               ></textarea>
 
               <button
-                data-aos="fade-up"
                 type="submit"
                 value="Send"
                 className={`px-4 py-4 delay-75 rounded-full text-gray-100 ${

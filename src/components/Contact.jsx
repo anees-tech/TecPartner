@@ -14,7 +14,6 @@ const Contact = () => {
         }
       />
       <Form />
-      <RenderBar />
       <Footer />
     </>
   );

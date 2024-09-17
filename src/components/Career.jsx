@@ -31,10 +31,10 @@ const Career = () => {
               meantime, if you have any inquiries about available jobs, feel
               free to reach out to us at{" "}
               <a
-                href="mailto:info@tecpartner.net"
+                href="mailto:careers@tecpartner.net"
                 className="text-indigo-600 underline"
               >
-                info@tecpartner.net
+                careers@tecpartner.net
               </a>{" "}
               or connect with us on LinkedIn. You can also send us a message
               through the Contact section.
