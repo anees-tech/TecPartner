@@ -30,7 +30,7 @@ const HeaderTopBar = () => {
           <h3>info@tecpartner.net</h3>
         </div>
         {/* devidor */}
-        <div className="w-[1px] h-5 bg-black"></div>
+        <div className="w-[1px] h-5 bg-white"></div>
         {/* second item */}
         <div className="flex gap-2 items-center justify-center">
           <svg
