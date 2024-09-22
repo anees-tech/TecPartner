@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.footer{
+  background: url('../public/images/footer-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

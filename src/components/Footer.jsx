@@ -7,11 +7,11 @@ const Footer = () => {
   let width = 1.5;
   let heightAndWidth = 24;
   return (
-    <footer className="bg-white">
-      <div className="container px-6 py-12 pb-6 mx-auto">
-        <div className="lg:flex lg:gap-16">
+    <footer className="footer overflow-hidden">
+      <div className="container px-6 py-12 pb-0 mx-auto flex flex-col items-center justify-center">
+        <div className="lg:flex lg:gap-48 border-b border-solid border-gray-500 pb-4">
           <div className="w-auto -mx-6">
-            <div className="px-6">
+            <div className="px-6 flex flex-col items-center justify-center flex-1">
               <Link to="/">
                 <img src="images/logo.png" alt="logo" className="h-24 w-24 " />
               </Link>
@@ -21,13 +21,15 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-6 lg:mt-0 lg:flex-1">
-            <div className="flex  gap-12 ">
+          <div className="second mt-6 lg:mt-0 lg:flex-1">
+            <div className="flex gap-12 items-center justify-center">
+              <div className="flex flex-col sm:flex-row p-6 gap-6  justify-center">
+
               <div>
-                <h3 className="text-gray-700 uppercase font-bold">
+                <h3 className="text-black uppercase font-bold">
                   Quick Links
                 </h3>
-                <div className="flex flex-col my-2 text-gray-500">
+                <div className="flex flex-col my-2 text-gray-800">
                   <Link to="/" className="hover:underline">
                     Home
                   </Link>
@@ -47,89 +49,102 @@ const Footer = () => {
               </div>
 
               <div>
-                <h3 className="text-gray-700 uppercase font-bold">SERVICES</h3>
+                <h3 className="text-black uppercase font-bold">SERVICES</h3>
                 <Link to="/Services">
-                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                  <span className="block mt-2 text-sm text-gray-800 hover:underline">
                     RPO
                   </span>
                 </Link>
                 <Link to="/Services">
-                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                  <span className="block mt-2 text-sm text-gray-800 hover:underline">
                     BPO
                   </span>
                 </Link>
                 <Link to="/Services">
-                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                  <span className="block mt-2 text-sm text-gray-800 hover:underline">
                     ITO
                   </span>
                 </Link>
               </div>
 
-              <div className="flex gap-12 flex-wrap">
+              </div>
+
+
+              <div className="flex gap-6 flex-wrap justify-center items-center">
+                {/* first half */}
+                <div className="space-y-6">
+
                 <div>
-                  <h3 className="text-gray-700 uppercase font-bold">
+                  <h3 className="text-black uppercase font-bold">
                     PAKISTAN
                   </h3>
-                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                  <span className="block mt-2 text-sm text-gray-800 hover:underline">
                     +92 333 5535234
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
-                    className="block mt-2 text-sm text-gray-600 hover:underline"
+                    className="block mt-2 text-sm text-gray-800 hover:underline"
                   >
                     info@tecpartner.net
                   </a>
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase font-bold">UAE</h3>
-                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                  <h3 className="text-black uppercase font-bold">UAE</h3>
+                  <span className="block mt-2 text-sm text-gray-800 hover:underline">
                     +971 50 344 9802
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
-                    className="block mt-2 text-sm text-gray-600 hover:underline"
+                    className="block mt-2 text-sm text-gray-800 hover:underline"
                   >
                     info@tecpartner.net
                   </a>
                 </div>
 
+                </div>
+
+                {/* first half */}
+
+                <div className="space-y-6">
+
                 <div>
-                  <h3 className="text-gray-700 uppercase font-bold">
+                  <h3 className="text-black uppercase font-bold">
                     AUSTRALIA
                   </h3>
-                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                  <span className="block mt-2 text-sm text-gray-800 hover:underline">
                     +61 410 686 748
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
-                    className="block mt-2 text-sm text-gray-600 hover:underline"
+                    className="block mt-2 text-sm text-gray-800 hover:underline"
                   >
                     info@tecpartner.net
                   </a>
                 </div>
 
                 <div>
-                  <h3 className="text-gray-700 uppercase font-bold">USA</h3>
-                  <span className="block mt-2 text-sm text-gray-600 hover:underline">
+                  <h3 className="text-black uppercase font-bold">USA</h3>
+                  <span className="block mt-2 text-sm text-gray-800 hover:underline">
                     +1 719 374 8482
                   </span>
                   <a
                     href="mailto:info@tecpartner.net"
-                    className="block mt-2 text-sm text-gray-600 hover:underline"
+                    className="block mt-2 text-sm text-gray-800 hover:underline"
                   >
                     info@tecpartner.net
                   </a>
                 </div>
+
+                </div>
+
               </div>
             </div>
           </div>
         </div>
 
-        <hr className="h-px my-6 bg-gray-200 border-none dark:bg-gray-700" />
-
-        <div>
-          <p className="text-center text-gray-500 dark:text-gray-400">
+        <div className="pb-4 pt-3">
+          <p className="text-center text-gray-900 dark:text-gray-900">
             © TecPartner - All rights reserved
           </p>
         </div>
