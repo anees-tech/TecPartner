@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Aos from "aos";
+import JobApplicationForm from "./components/CareerSection/JobApplicationForm";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           path="/service-detail/:serviceType"
           element={<IndivisualService />}
         />
+        <Route path="/career/apply-to/:jobTitle" element={<JobApplicationForm />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </div>

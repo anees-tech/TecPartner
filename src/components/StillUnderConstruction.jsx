@@ -6,7 +6,7 @@ function StillUnderConstruction() {
                 <div className="w-1/2">
                     <img
                         data-aos="fade-right"
-                        src="images/underConstruction.svg"
+                        src="/images/underConstruction.svg"
                         alt="Page Under Construction"
                         className="w-full h-auto rounded-3xl"
                     />

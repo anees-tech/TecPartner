@@ -32,7 +32,7 @@ const svgIcons = [
 
 function Home() {
   return (
-    <div>
+    <div className="bg-gray-100">
       <Header />
       <section className="services-grid flex items-center justify-center w-full bg-gray-100">
         <div

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import CareerJobsDetail from './CareerJobsDetail';
+import { FaAngleUp } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
+
 const CareerAccordionItems = ({ title, jobs }) => {
     const [openJobs, setOpenJobs] = useState({});
     const [fieldOpen, setFieldOpen] = useState(true);
@@ -17,8 +20,8 @@ const CareerAccordionItems = ({ title, jobs }) => {
 
     return (
         <div className="border rounded-lg mb-2">
-            <button onClick={fieldsOpen} className="w-full flex items-center justify-between px-4 py-2 text-lg font-medium bg-gray-100">
-                <span>{title}</span>
+            <button onClick={fieldsOpen} className="w-full flex items-center justify-between px-4 py-2 text-lg font-medium">
+                <span>{title}</span> {fieldOpen ? <FaAngleUp /> : <FaAngleDown />}
             </button>
 
             {

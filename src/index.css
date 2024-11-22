@@ -7,4 +7,6 @@
   background: url('../public/images/footer-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}html {
+  scroll-behavior: smooth;
 }

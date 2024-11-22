@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeaderTopBar from "./HeaderTopBar";
 
+
+
 const Navbar = () => {
   const [isNavbarOpen, setNavbarOpen] = useState(false);
 
@@ -28,7 +30,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
         <span className=" h-16 w-28 p-4 self-center text-2xl font-semibold whitespace-nowrap text-white flex items-center space-x-3 rtl:space-x-reverse">
           <Link to="/">
-            <img src="images/logo.png" alt="logo" />
+            <img src={'/images/logo.png'} alt="logo" />
           </Link>
         </span>
         <button

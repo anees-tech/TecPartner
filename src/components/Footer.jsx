@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="w-auto -mx-6">
             <div className="px-6 flex flex-col items-center justify-center flex-1">
               <Link to="/">
-                <img src="images/logo.png" alt="logo" className="h-24 w-24 " />
+                <img src="/images/logo.png" alt="logo" className="h-24 w-24 " />
               </Link>
 
               <SocialLinks color={color} width={width} heightAndWidth={heightAndWidth}/>

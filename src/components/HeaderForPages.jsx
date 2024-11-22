@@ -22,7 +22,7 @@ const HeaderForPages = (props) => {
         </p>
       </div>
       <svg
-        className="fill-[#15307c] border-gray-100 bg-gray-100"
+        className="fill-[#15307c]"
         viewBox="0 0 1440 57"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

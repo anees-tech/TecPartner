@@ -62,7 +62,7 @@ const Form = () => {
             data-aos="fade-right"
             className="flex flex-col justify-center items-center gap-[1.5rem] w-[40%] -mt-12"
           >
-            <img src="images/logo.png" alt="LOGO" className="h-48 w-48" />
+            <img src="/images/logo.png" alt="LOGO" className="h-48 w-48" />
           </div>
 
           <div className="w-[60%]" data-aos="fade-up">
